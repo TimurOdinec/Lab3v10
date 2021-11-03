@@ -86,29 +86,38 @@ int main()
     std::cout << "Введите кол-во строк-столбцов квадратной матрицы A:";
     std::cin >> countRowColumn;
     SquareMatrix sMatrixA(countRowColumn);
+    //используем метод класса-родителя
     sMatrixA.addElements();
+    //используем метод класса-родителя
     sMatrixA.viewMatrix();
 
     std::cout << "Введите кол-во строк-столбцов квадратной матрицы B:";
     std::cin >> countRowColumn;
     SquareMatrix sMatrixB(countRowColumn);
+    //используем метод класса-родителя
     sMatrixB.addElements();
+    //используем метод класса-родителя
     sMatrixB.viewMatrix();
 
     std::cout << "Произведение матриц (C=A*B):" << std::endl;
     SquareMatrix sMatrixC;
     sMatrixC.productMatrix(sMatrixA, sMatrixB);
+    //используем метод класса-родителя
     sMatrixC.viewMatrix();
 
     std::cout << "Сложение матриц (C=A+B):" << std::endl;
     SquareMatrix sMatrixF;
+    //используем метод класса-родителя
     sMatrixF.summMatrix(sMatrixA, sMatrixB);
+    //используем метод класса-родителя
     sMatrixF.viewMatrix();
 
     std::cout << "Умножение матрицы на скалар (3*A):" << std::endl;
     int scalarSecond = 3;
     SquareMatrix sMatrixG;
+    //используем метод класса-родителя
     sMatrixG.productMatrixScalar(scalarSecond, sMatrixA);
+    //используем метод класса-родителя
     sMatrixG.viewMatrix();
 
     std::cout << "Введите кол-во строк-столбцов квадратной матрицы D:";
@@ -118,9 +127,18 @@ int main()
     std::cout << "Транспонирование матрицы D:" << std::endl;
     SquareMatrix sMatrixE;
     sMatrixE.transposeMatrix(sMatrixD);
+    //используем метод класса-родителя
     sMatrixD.viewMatrix();
     std::cout << std::endl;
+    //используем метод класса-родителя
     sMatrixE.viewMatrix();
+
+    std::cout << "Перестановка строк матрицы E по заданному вектору транспозиции:" << std::endl;
+    SquareMatrix sMatrixK;
+    //используем метод класса-родителя
+    sMatrixK.changeMatrixVector(sMatrixE);
+    //используем метод класса-родителя
+    sMatrixK.viewMatrix();
     
     return 0;
 }
